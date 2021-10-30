@@ -16,18 +16,26 @@
 //     }
 // };
 
-// O(n) Solution:
+// O(n) Solutions:
 
-var twoSum = function (nums, target) {
+// var twoSum = function (nums, target) {
+//   const memory = {};
+//   for (let i = 0; i < nums.length; i++) {
+//     currentValue = nums[i];
+//     currentComplimentValue = target - currentValue;
+
+//     if (memory[currentComplimentValue] !== undefined) {
+//       return [i, memory[currentComplimentValue]];
+//     } else {
+//       memory[currentValue] = i;
+//     }
+//   }
+// };
+
+const twoSum = (nums, target) => {
   const memory = {};
-  for (let i = 0; i < nums.length; i++) {
-    currentValue = nums[i];
-    currentComplimentValue = target - currentValue;
-
-    if (memory[currentComplimentValue] !== undefined) {
-      return [i, memory[currentComplimentValue]];
-    } else {
-      memory[currentValue] = i;
-    }
+  for ([index, value] of nums.entries()) {
+    if (memory[value] !== undefined) return [memory[value], index];
+    memory[target - value] = index;
   }
 };
