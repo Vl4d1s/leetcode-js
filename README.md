@@ -2,6 +2,7 @@
 
 Solving LeetCode problems with JS
 
-|   # | Title       | Difficulty |
-| --: | ----------- | :--------- |
-|   1 | [Two Sum](Problems/0001-two-sum) | Easy       |
+|   # | Title                                            | Difficulty |
+| --: | ------------------------------------------------ | :--------- |
+|   1 | [Two Sum](Problems/0001-two-sum)                 | Easy       |
+|   1 | [Add Two Numbers](Problems/0002-add-two-numbers) | Medium     |
