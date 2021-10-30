@@ -10,6 +10,8 @@
  * @param {ListNode} l2
  * @return {ListNode}
  */
+
+// O(n) Solution:
 const addTwoNumbers = (l1, l2) => {
   let head = new ListNode(0);
   let node = head;
