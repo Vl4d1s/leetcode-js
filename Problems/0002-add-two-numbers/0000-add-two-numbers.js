@@ -13,13 +13,13 @@
 
 // O(n) Solution:
 const addTwoNumbers = (l1, l2) => {
-  let head = new ListNode(0);
-  let node = head;
   let carry = 0;
+  let newListNodeHead = new ListNode(0);
+  let newListNodeHeadTemp = newListNodeHead;
 
   while (l1 || l2) {
-    const l1Value = l1 ? l1.val : 0;
-    const l2Value = l2 ? l2.val : 0;
+    l1Value = l1?.val || 0;
+    l2Value = l2?.val || 0;
     let sum = l1Value + l2Value + carry;
     carry = 0;
 
@@ -28,16 +28,14 @@ const addTwoNumbers = (l1, l2) => {
       carry = 1;
     }
 
-    node.next = new ListNode(sum);
-    node = node.next;
+    newListNodeHead.next = new ListNode(sum);
+    newListNodeHead = newListNodeHead.next;
 
     if (l1) l1 = l1.next;
     if (l2) l2 = l2.next;
   }
-
   if (carry) {
-    node.next = new ListNode(carry);
+    newListNodeHead.next = new ListNode(carry);
   }
-
-  return head.next;
+  return newListNodeHeadTemp.next;
 };
