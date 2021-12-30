@@ -39,3 +39,17 @@ const twoSum = (nums, target) => {
     memory[target - value] = index;
   }
 };
+
+53. Maximum Subarray
+
+const maxSubArray = (nums) => {
+  let maxSubSum = nums[0];
+  let currentSum = 0;
+
+  for (let number of nums) {
+    currentSum = currentSum < 0 ? 0 : currentSum;
+    currentSum += number;
+    maxSubSum = Math.max(maxSubSum, currentSum);
+  }
+  return maxSubSum;
+};
