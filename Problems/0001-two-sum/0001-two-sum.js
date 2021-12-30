@@ -40,7 +40,7 @@ const twoSum = (nums, target) => {
   }
 };
 
-53. Maximum Subarray
+// 53. Maximum Subarray
 
 const maxSubArray = (nums) => {
   let maxSubSum = nums[0];
