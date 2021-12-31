@@ -53,3 +53,26 @@ const maxSubArray = (nums) => {
   }
   return maxSubSum;
 };
+
+// 283. Move Zeroes
+
+/**
+ * @param {number[]} nums
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */
+const moveZeroes = (nums) => {
+  let lastNonZeroFoundAt = 0;
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] !== 0) {
+      swap(nums, i, lastNonZeroFoundAt);
+      lastNonZeroFoundAt = lastNonZeroFoundAt + 1;
+    }
+  }
+};
+
+const swap = (nums, index1, index2) => {
+  let temp = nums[index1];
+  nums[index1] = nums[index2];
+  nums[index2] = temp;
+};
+
