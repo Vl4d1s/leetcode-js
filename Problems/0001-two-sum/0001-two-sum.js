@@ -76,3 +76,13 @@ const swap = (nums, index1, index2) => {
   nums[index2] = temp;
 };
 
+// https://coderbyte.com/editor/Longest%20Word:JavaScript
+
+function LongestWord(sen) {
+  let maxLengthWord = "";
+  for (string of sen.split(" ")) {
+    maxLengthWord =
+      string.length > maxLengthWord.length ? string : maxLengthWord;
+  }
+  return maxLengthWord;
+}
