@@ -86,3 +86,20 @@ function LongestWord(sen) {
   }
   return maxLengthWord;
 }
+
+// 217. Contains Duplicate
+
+/**
+ * @param {number[]} nums
+ * @return {boolean}
+ */
+const containsDuplicate = (nums) => {
+  const memory = {};
+  for (let [index, number] of nums.entries()) {
+    if (memory[number] !== undefined) {
+      return true;
+    }
+    memory[number] = index;
+  }
+  return false;
+};
