@@ -113,3 +113,10 @@ const rotate = (nums, k) =>
       k > nums.length ? nums.length - (k % nums.length) : nums.length - k
     )
   );
+
+// 344. Reverse String
+/**
+ * @param {character[]} s
+ * @return {void} Do not return anything, modify s in-place instead.
+ */
+const reverseString = (s) => s.reverse().join("");
