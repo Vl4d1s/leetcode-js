@@ -142,5 +142,16 @@ const getString = (number) => {
   else return number.toString();
 };
 
-console.log(fizzBuzz(15));
+// 136. Single Number
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+const singleNumber = (nums) => {
+  const memory = {};
+  for (const number of nums) {
+    memory[number] = memory[number] + 1 || 1;
+  }
 
+  return Object.entries(memory)?.find((keyValue) => keyValue[1] === 1)?.[0];
+};
