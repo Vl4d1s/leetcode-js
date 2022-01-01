@@ -120,3 +120,27 @@ const rotate = (nums, k) =>
  * @return {void} Do not return anything, modify s in-place instead.
  */
 const reverseString = (s) => s.reverse().join("");
+
+
+// 412. Fizz Buzz
+/**
+ * @param {number} n
+ * @return {string[]}
+ */
+const fizzBuzz = (n) => {
+  const answer = [];
+  for (let i = 0; i < n; i++) {
+    answer.push(getString(i + 1));
+  }
+  return answer;
+};
+
+const getString = (number) => {
+  if (number % 3 === 0 && number % 5 === 0) return "FizzBuzz";
+  else if (number % 3 === 0) return "Fizz";
+  else if (number % 5 === 0) return "Buzz";
+  else return number.toString();
+};
+
+console.log(fizzBuzz(15));
+
